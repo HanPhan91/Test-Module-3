@@ -18,7 +18,7 @@ public class ProductView implements iProductView {
     private String UPDATE = "UPDATE product SET product.name=?, product.price=?, product.quantity=?, product.color=? ,product.desc=?, product.idCategory=? WHERE product.id=?;";
     private String REMOVE = "UPDATE product SET status='0' WHERE id=?;";
     private String ACTIVE = "UPDATE product SET status='1' WHERE id=?;";
-    private String SEARCH= "select * from product INNER join category where product.name LIKE ? && product.idCategory= category.id;";
+    private String SEARCH= "select * from product INNER join category where product.name LIKE ? && product.idCategory= category.id && product.status='1';";
 
     @Override
     public List<Product> selectAllProduct() {

@@ -23,8 +23,8 @@
         <div class="col-6 align-content-lg-start">
             <a href="/products?action=create" class="btn btn-success">Add new product</a>
         </div>
-        <div class="col-6 align-content-end">
-            <form method="post" action="/products?action=search">
+        <div class="col-6 align-content-end ">
+            <form method="post" action="/products?action=search" class="float-right">
                 <input type="text" placeholder="Search" name="search">
                 <input type="submit" value="Search">
             </form>
