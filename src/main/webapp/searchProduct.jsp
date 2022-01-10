@@ -45,6 +45,7 @@
                 </c:forEach>
                 </tbody>
             </table>
+
             </c:if>
             <c:if test="${requestScope['listProduct'] == null}">
                 <p class="text-info">Not found</p>
@@ -55,6 +56,11 @@
                         window.location = "/products?action=remove&id=" + id;
                 }
             </script>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <a href="/products" class="btn btn-warning text-center">Back to Homepage</a>
         </div>
     </div>
 </div>
