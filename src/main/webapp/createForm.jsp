@@ -32,8 +32,6 @@
                 <span class="form-text">Category:</span>
                 <select name="category">
                     <c:forEach var="category" items="${requestScope['listCategory']}">
-                        <option value="${product.idCategory}" selected>${category.nameCategory}</option>
-                        <c:if test="${category.id != product.idCategory}"></c:if>
                         <option value="${category.id}">${category.name}</option>
                     </c:forEach>
                 </select><br>

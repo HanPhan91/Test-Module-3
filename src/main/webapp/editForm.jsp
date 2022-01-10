@@ -31,9 +31,12 @@
                 <input type="text" class="text form-control" placeholder="Description" name="desc" value="${requestScope['product'].desc}">
                 <span class="form-text">Category:</span>
                 <select name="category">
+                    <option value="${product.idCategory}" selected>${product.nameCategory}</option>
                     <c:forEach var="category" items="${requestScope['listCategory']}">
-                        <option value="${category.id}">${category.name}</option>
-                    </c:forEach>
+                    <c:if test="${category.id != product.idCategory}">
+                    <option value="${category.id}">${category.name}</option>
+                    </c:if>
+                </c:forEach>
                 </select><br>
                 <input type="submit" value="Update" class="btn btn-success mt-5">
                 <a href="/products" class="btn btn-warning mt-5">Back</a>
